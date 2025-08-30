@@ -1,0 +1,14 @@
+{
+    "header": {
+        "categories": "Danh mục",
+        "search": "Tìm kiếm khóa học",
+        "teach": "Giảng dạy trên ByWay",
+        "login": "Đăng nhập",
+        "sign_up": "Đăng ký"
+    },
+    "sidebar": {
+        "dashboard": "Bảng điều khiển",
+        "courses": "Khóa học",
+        "settings": "Cài đặt"
+    }
+}

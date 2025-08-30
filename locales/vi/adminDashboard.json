@@ -1,0 +1,14 @@
+{
+  "title": "Chào mừng đến với Admin Dashboard",
+  "add_course": "Thêm khoá học",
+  "more": "Khác",
+  "free": "Miễn phí",
+  "metric": {
+    "price": "Giá",
+    "chapters": "Chương",
+    "orders": "Đơn hàng",
+    "certificates": "Chứng chỉ",
+    "reviews": "Đánh giá",
+    "added_to_shelf": "Đã thêm vào kệ"
+  }
+}

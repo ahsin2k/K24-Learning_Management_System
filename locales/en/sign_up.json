@@ -1,0 +1,15 @@
+{
+    "title": "Welcome to Sign Up",
+    "please_signup":"please signup",
+    "create_your_account":"Create Your Account",
+    "first_name":"First Name",
+    "last_name":"Last Name",
+    "username":"Username",
+    "password":"Password",
+    "confirm_password":"Confirm Password",
+    "create_account":"Create Account",
+    "or_sign_up_with":"Or Sign Up With",
+    "already_have_an_account?":"Already Have An Account?",
+    "log_in":"Login"
+    
+}

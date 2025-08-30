@@ -1,0 +1,61 @@
+{
+  "breadcrumb_home": "Trang chủ",
+  "breadcrumb_course": "Nhập môn Thiết kế Trải nghiệm Người dùng",
+  "default_course_title": "Nhập môn Thiết kế Trải nghiệm Người dùng",
+  "rating_count_fmt": "(3.240 lượt đánh giá)",
+  "course_meta": "Tổng 22 giờ, 155 bài giảng, Mọi trình độ",
+  "created_by": "Tạo bởi",
+
+  "preview_alt": "Xem trước khoá học",
+  "off_percent": "Giảm 50%",
+  "add_to_cart": "Thêm vào giỏ",
+  "buy_now": "Mua ngay",
+  "share": "Chia sẻ",
+
+  "tab_description": "Mô tả",
+  "tab_certification": "Chứng chỉ",
+  "tab_instructor": "Giảng viên",
+  "tab_syllabus": "Giáo trình",
+  "tab_reviews": "Đánh giá",
+
+  "desc_text": "Khoá học giới thiệu các nguyên lý cốt lõi của UX như nghiên cứu, kiến trúc thông tin, wireframe, prototype và kiểm thử khả dụng. Bạn sẽ học bằng thực hành qua các bài tập và ví dụ.",
+  "cert_text": "Hoàn thành khoá học, bạn sẽ nhận chứng chỉ hoàn tất để thể hiện kỹ năng với nhà tuyển dụng hoặc khách hàng.",
+
+  "instructor_alt": "Giảng viên",
+  "instructor_role": "Chuyên gia UX cao cấp",
+  "instructor_bio": "Praful có hơn 10 năm kinh nghiệm trong UX và thiết kế sản phẩm, dẫn dắt đội ngũ và cố vấn cho hàng nghìn học viên.",
+
+  "syllabus_intro": "Giới thiệu UX Design",
+  "syllabus_basics": "Cơ bản về Thiết kế Lấy người dùng làm trung tâm",
+  "syllabus_elements": "Các thành phần của Trải nghiệm người dùng",
+  "syllabus_visual": "Nguyên lý Thiết kế Thị giác",
+  "lessons_count": "{{count}} bài học",
+  "syllabus_item_overview": "Tổng quan & mục tiêu học tập",
+  "syllabus_item_concepts": "Khái niệm & thuật ngữ chính",
+  "syllabus_item_project": "Mini project & tài nguyên",
+
+  "write_review": "Viết đánh giá của bạn",
+  "aria_rate_n": "Đánh giá {{n}} sao",
+  "rating_of_5": "{{n}} / 5",
+  "select_rating": "Chọn số sao",
+  "review_placeholder": "Chia sẻ trải nghiệm của bạn về khoá học…",
+  "submit_review": "Gửi đánh giá",
+
+  "learner_reviews": "Đánh giá từ học viên",
+  "reviews_total_fmt": "146.951 đánh giá",
+  "reviewed_on": "· Đánh giá ngày 22 Tháng 3, 2024",
+  "sample_review_text": "Ban đầu tôi hơi e ngại vì chưa có nền tảng thiết kế. Nhưng giảng viên đã diễn giải rất dễ hiểu, ví dụ thực tế giúp tôi nắm chắc kiến thức.",
+  "view_more_reviews": "Xem thêm đánh giá",
+
+  "what_customers_say": "Khách hàng nói gì",
+  "about_us": "Về chúng tôi",
+  "prev": "Trước",
+  "next": "Sau",
+  "go_to_page_n": "Tới trang {{n}}",
+
+  "more_like_this": "Khoá học tương tự",
+  "course_card_alt": "khoá học",
+  "sample_course_title": "Hướng dẫn Thiết kế cho người mới bắt đầu",
+  "create_course": "Tạo Khóa học"
+}
+

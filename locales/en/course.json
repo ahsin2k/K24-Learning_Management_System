@@ -1,0 +1,60 @@
+{
+  "breadcrumb_home": "Home",
+  "breadcrumb_course": "Introduction to User Experience Design",
+  "default_course_title": "Introduction to User Experience Design",
+  "rating_count_fmt": "(3,240 ratings)",
+  "course_meta": "22 Total Hours, 155 Lectures, All levels",
+  "created_by": "Created by",
+
+  "preview_alt": "Course Preview",
+  "off_percent": "50% Off",
+  "add_to_cart": "Add To Cart",
+  "buy_now": "Buy Now",
+  "share": "Share",
+
+  "tab_description": "Description",
+  "tab_certification": "Certification",
+  "tab_instructor": "Instructor",
+  "tab_syllabus": "Syllabus",
+  "tab_reviews": "Reviews",
+
+  "desc_text": "This course introduces the core principles of UX design, including research, information architecture, wireframing, prototyping, and usability testing. You’ll learn by doing with practical exercises and examples.",
+  "cert_text": "After finishing this course, you will receive a certificate of completion. Use it to showcase your skills to employers or clients.",
+
+  "instructor_alt": "Instructor",
+  "instructor_role": "Senior UX Designer",
+  "instructor_bio": "Praful has 10+ years of experience in UX and product design, leading design teams and mentoring thousands of students.",
+
+  "syllabus_intro": "Introduction to UX Design",
+  "syllabus_basics": "Basics of User-Centered Design",
+  "syllabus_elements": "Elements of User Experience",
+  "syllabus_visual": "Visual Design Principles",
+  "lessons_count": "{{count}} Lessons",
+  "syllabus_item_overview": "Overview & learning goals",
+  "syllabus_item_concepts": "Key concepts and terminology",
+  "syllabus_item_project": "Mini project & resources",
+
+  "write_review": "Write your review",
+  "aria_rate_n": "Rate {{n}} stars",
+  "rating_of_5": "{{n}} / 5",
+  "select_rating": "Select rating",
+  "review_placeholder": "Share your experience with this course…",
+  "submit_review": "Submit Review",
+
+  "learner_reviews": "Learner Reviews",
+  "reviews_total_fmt": "146,951 reviews",
+  "reviewed_on": "· Reviewed on 22nd March, 2024",
+  "sample_review_text": "I was initially apprehensive, having no prior design experience. But the instructor, John Doe, did an amazing job of breaking down complex concepts into easily digestible modules. The video lectures were engaging, and the real-world examples really helped solidify my understanding.",
+  "view_more_reviews": "View more Reviews",
+
+  "what_customers_say": "What Our Customer Say",
+  "about_us": "About Us",
+  "prev": "Previous",
+  "next": "Next",
+  "go_to_page_n": "Go to page {{n}}",
+
+  "more_like_this": "More Courses Like This",
+  "course_card_alt": "course",
+  "sample_course_title": "Beginner’s Guide to Design",
+  "create_course": "Create Course"
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Welcome to Admin Dashboard",
+  "add_course": "Add Course",
+  "more": "More",
+  "free": "Free",
+  "metric": {
+    "price": "Price",
+    "chapters": "Chapters",
+    "orders": "Orders",
+    "certificates": "Certificates",
+    "reviews": "Reviews",
+    "added_to_shelf": "Added to Shelf"
+  }
+}

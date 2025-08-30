@@ -1,0 +1,14 @@
+{
+    "header": {
+        "categories": "Categories",
+        "search": "Search Courses",
+        "teach": "Teach on ByWay",
+        "login": "Login",
+        "sign_up": "Sign Up"
+    },
+    "sidebar": {
+        "dashboard": "Dashboard",
+        "courses": "Courses",
+        "settings": "Settings"
+    }
+}
