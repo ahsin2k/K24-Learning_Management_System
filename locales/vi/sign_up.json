@@ -10,8 +10,11 @@
     "create_account":"Tạo Tài Khoản",
     "or_sign_up_with":"Hoặc Đăng Nhập Bằng",
     "already_have_an_account?":"Đã Có Tài Khoản?",
-    "log_in":"Đăng Nhập"
-
-
-
+    "log_in":"Đăng Nhập",
+    "validates": {
+        "not_match_password": "Mật khẩu không khớp!",
+        "fail": "Đăng ký không thành công!",
+        "success": "Đăng ký thành công! Vui lòng kiểm tra email của bạn để xác minh tài khoản.",
+        "error": "Có lỗi xảy ra, vui lòng thử lại"
+    }
 }

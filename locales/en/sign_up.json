@@ -10,6 +10,11 @@
     "create_account":"Create Account",
     "or_sign_up_with":"Or Sign Up With",
     "already_have_an_account?":"Already Have An Account?",
-    "log_in":"Login"
-    
+    "log_in":"Login.",
+    "validates": {
+        "not_match_password": "Passwords do not match!",
+        "fail": "Registration failed!",
+        "success": "Registration successful! Please check your email to verify your account.",
+        "error": "An error occurred during registration."
+    }
 }
