@@ -10,5 +10,12 @@
         "dashboard": "Bảng điều khiển",
         "courses": "Khóa học",
         "settings": "Cài đặt"
+    },
+    "account": {
+        "profile": "Hồ sơ",
+        "my_courses": "Khóa học của tôi",
+        "settings": "Cài đặt",
+        "logout": "Đăng xuất",
+        "logout_success": "Đăng xuất thành công"
     }
 }

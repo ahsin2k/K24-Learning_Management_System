@@ -8,7 +8,7 @@
     "or_sign_in_with":"Hoặc Đăng Ký Bằng",
     "password":"Mật khẩu",
     "dont_have_an_account?":"Không Có Tài Khoản",
-    "sign_up":"Đăng Ký?"
-
-
+    "sign_up":"Đăng Ký?",
+    "login_failed":"Đăng nhập không thành công. Vui lòng kiểm tra email và mật khẩu của bạn.",
+    "login_success":"Đăng nhập thành công!"
 }

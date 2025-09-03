@@ -10,5 +10,12 @@
         "dashboard": "Dashboard",
         "courses": "Courses",
         "settings": "Settings"
+    },
+    "account": {
+        "profile": "Profile",
+        "my_courses": "My Courses",
+        "settings": "Settings",
+        "logout": "Logout",
+        "logout_success": "Logout successful"
     }
 }
