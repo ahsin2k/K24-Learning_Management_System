@@ -1,0 +1,13 @@
+{
+    "title": "Welcome to your profile",
+    "profileinfo":"profileInfo",
+    "firstname":"FirstName ",
+    "lastName":"LastName",
+    "headline":"HeadLine",
+    "description":"Description",
+    "language":"Language",
+    "imagePreview":"ImagePreview",
+    "uploadImage":"UploadImage",
+    "saveProfile":"SaveProfile"
+
+}
