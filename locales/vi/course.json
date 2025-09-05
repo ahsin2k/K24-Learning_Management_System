@@ -2,9 +2,10 @@
   "breadcrumb_home": "Trang chủ",
   "breadcrumb_course": "Nhập môn Thiết kế Trải nghiệm Người dùng",
   "default_course_title": "Nhập môn Thiết kế Trải nghiệm Người dùng",
-  "rating_count_fmt": "(3.240 lượt đánh giá)",
-  "course_meta": "Tổng 22 giờ, 155 bài giảng, Mọi trình độ",
+  "rating_count_fmt": "({{count}} lượt đánh giá)",
+  "course_meta": "Tổng {{totalHour}} giờ, {{totalLectures}} bài giảng, Mọi trình độ",
   "created_by": "Tạo bởi",
+  "courseName": "Tên khoá học",
 
   "preview_alt": "Xem trước khoá học",
   "off_percent": "Giảm 50%",
@@ -40,13 +41,16 @@
   "select_rating": "Chọn số sao",
   "review_placeholder": "Chia sẻ trải nghiệm của bạn về khoá học…",
   "submit_review": "Gửi đánh giá",
+  "review_submitted": "Đánh giá đã được gửi!",
+  "review_submit_failed": "Gửi đánh giá thất bại. Vui lòng thử lại.",
 
   "learner_reviews": "Đánh giá từ học viên",
-  "reviews_total_fmt": "146.951 đánh giá",
-  "reviewed_on": "· Đánh giá ngày 22 Tháng 3, 2024",
+  "reviews_total_fmt": "{{count}} đánh giá",
+  "reviewed_on": "· Đánh giá ngày {{date}}",
   "sample_review_text": "Ban đầu tôi hơi e ngại vì chưa có nền tảng thiết kế. Nhưng giảng viên đã diễn giải rất dễ hiểu, ví dụ thực tế giúp tôi nắm chắc kiến thức.",
   "view_more_reviews": "Xem thêm đánh giá",
-
+  "show_less_reviews": "Ẩn bớt đánh giá",
+  
   "what_customers_say": "Khách hàng nói gì",
   "about_us": "Về chúng tôi",
   "prev": "Trước",

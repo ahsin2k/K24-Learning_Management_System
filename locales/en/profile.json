@@ -13,6 +13,8 @@
     "profile": "Profile",
     "myCourses": "My Courses",
     "myReviews": "My Reviews",
+    "searchUser":"Search user...",
+    "ratings":"ratings",
     "messages": {
         "updateSuccess": "Profile updated successfully!",
         "updateError": "Failed to update profile. Please try again."

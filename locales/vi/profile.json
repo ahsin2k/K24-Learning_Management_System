@@ -13,6 +13,8 @@
     "profile": "Hồ Sơ",
     "myCourses": "Khóa Học Của Tôi",
     "myReviews": "Đánh Giá Của Tôi",
+    "ratings":"đánh giá",
+    "searchUser":"Tìm kiếm người dùng...",
     "messages": {
         "updateSuccess": "Cập nhật hồ sơ thành công!",
         "updateError": "Cập nhật hồ sơ thất bại. Vui lòng thử lại."

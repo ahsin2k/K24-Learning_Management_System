@@ -15,7 +15,7 @@
     },
     "account": {
         "profile": "Profile",
-        "my_courses": "My Courses",
+        "manager_courses": "Manage Courses",
         "settings": "Settings",
         "logout": "Logout",
         "logout_success": "Logout successful"
