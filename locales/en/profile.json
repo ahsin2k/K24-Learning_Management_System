@@ -1,13 +1,20 @@
 {
     "title": "Welcome to your profile",
-    "profileinfo":"profileInfo",
-    "firstname":"FirstName ",
-    "lastName":"LastName",
-    "headline":"HeadLine",
+    "profileinfo":"Profile Info",
+    "firstname":"First Name ",
+    "lastName":"Last Name",
+    "headline":"Username",
     "description":"Description",
-    "language":"Language",
-    "imagePreview":"ImagePreview",
-    "uploadImage":"UploadImage",
-    "saveProfile":"SaveProfile"
-
+    "email":"Email",
+    "imagePreview":"Image Preview",
+    "shareProfile":"Share Profile",
+    "uploadImage":"Upload Image",
+    "saveProfile":"Save Profile",
+    "profile": "Profile",
+    "myCourses": "My Courses",
+    "myReviews": "My Reviews",
+    "messages": {
+        "updateSuccess": "Profile updated successfully!",
+        "updateError": "Failed to update profile. Please try again."
+    }
 }

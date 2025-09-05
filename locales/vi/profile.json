@@ -3,10 +3,18 @@
     "profileinfo":"Thông Tin Hồ Sơ",
     "firstname":"Tên ",
     "lastName":"Họ",
-    "headline":"Tiêu Đề",
-    "description":"Miêu Tả",
-    "language":"Ngôn Ngữ",
+    "headline":"Tên đăng nhập",
+    "description":"Mô Tả",
+    "email":"E-mail",
     "imagePreview":"Xem trước hình",
+    "shareProfile":"Chia sẻ hồ sơ",
     "uploadImage":"Tải hình lên",
-    "saveProfile":"Lưu Hồ Sơ"
+    "saveProfile":"Lưu Hồ Sơ",
+    "profile": "Hồ Sơ",
+    "myCourses": "Khóa Học Của Tôi",
+    "myReviews": "Đánh Giá Của Tôi",
+    "messages": {
+        "updateSuccess": "Cập nhật hồ sơ thành công!",
+        "updateError": "Cập nhật hồ sơ thất bại. Vui lòng thử lại."
+    }
 }

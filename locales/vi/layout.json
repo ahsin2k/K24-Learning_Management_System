@@ -4,7 +4,9 @@
         "search": "Tìm kiếm khóa học",
         "teach": "Giảng dạy trên ByWay",
         "login": "Đăng nhập",
-        "sign_up": "Đăng ký"
+        "sign_up": "Đăng ký",
+        "en": "Tiếng Anh",
+        "vi": "Tiếng Việt"
     },
     "sidebar": {
         "dashboard": "Bảng điều khiển",

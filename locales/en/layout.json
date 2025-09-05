@@ -4,7 +4,9 @@
         "search": "Search Courses",
         "teach": "Teach on ByWay",
         "login": "Login",
-        "sign_up": "Sign Up"
+        "sign_up": "Sign Up",
+        "en": "English",
+        "vi": "Vietnamese"
     },
     "sidebar": {
         "dashboard": "Dashboard",
