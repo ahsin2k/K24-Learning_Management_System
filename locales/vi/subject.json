@@ -1,5 +1,65 @@
 {
-    "title": "Chào mừng đến với Danh sách Khóa học",
-    "create_course": "Tạo Khóa học",
-    "detail": "Đây là phần chi tiết cho danh sách khóa học với id: {{id}}"
+  "create_subject": "Tạo Môn học",
+  "back": "Quay lại",
+  "breadcrumb": {
+    "chapter": "Chương 1 - Trạng thái rắn"
+  },
+  "actions": {
+    "delete": "Xóa",
+    "move_to_draft": "Chuyển sang nháp",
+    "add_course": "Thêm khóa học"
+  },
+  "tab_details": "Chi tiết",
+  "tab_resources": "Tài nguyên",
+  "tab_seo": "SEO",
+
+  "chapter_details": "Chi tiết chương",
+  "chapter_details_hint": "Mô tả ngắn gọn về nội dung chương, có thể thay đổi tùy ý theo yêu cầu.",
+
+  "field": {
+    "title": "Tiêu đề",
+    "subtitle": "Phụ đề",
+    "description": "Mô tả",
+    "slug": "Slug",
+    "meta_description": "Mô tả meta"
+  },
+
+  "sample_chapter_title": "Chương 1 - Trạng thái rắn",
+  "sample_chapter_subtitle": "Học về trạng thái rắn một cách dễ dàng và có thêm đề mẫu, ghi chú.",
+
+  "upload": {
+    "drag_drop_or_browse": "Kéo & thả tệp, hoặc Chọn tệp"
+  },
+
+  "resources": {
+    "upload_notes": {
+      "title": "Tải ghi chú",
+      "lead": "Đây là phần mô tả ví dụ cho tài nguyên. Bạn có thể tải lên tài liệu hoặc tệp cần thiết."
+    },
+    "fields": {
+      "content_type": "Loại nội dung",
+      "title": "Tiêu đề",
+      "description": "Mô tả",
+      "upload_file": "Tải tệp",
+      "upload_thumbnail": "Tải ảnh thu nhỏ"
+    },
+    "hints": {
+      "file": "Chấp nhận tệp dạng Text, Word, PDF.",
+      "thumb": "Ảnh thu nhỏ định dạng JPEG, PNG."
+    },
+    "defaults": {
+      "content_type": "Ghi chú",
+      "title": "Ghi chú",
+      "description": "Đây là đoạn mô tả mẫu cho ghi chú, có thể chỉnh sửa theo ý muốn."
+    }
+  },
+
+  "seo": {
+    "title": "SEO",
+    "lead": "Đây là phần giới thiệu ngắn cho SEO, bạn có thể mô tả cách tối ưu hóa hiển thị tìm kiếm.",
+    "ppt_title": "Tiêu đề PPT",
+    "description": "Mô tả",
+    "sample_title": "Ghi chú",
+    "sample_desc": "Đây là mô tả mẫu cho SEO, có thể thay đổi nội dung tùy ý."
+  }
 }

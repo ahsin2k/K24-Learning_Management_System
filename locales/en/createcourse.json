@@ -1,0 +1,45 @@
+{
+  "create_course": "Create Course",
+  "course_name_header": "NCERT Solutions for Class 12 Chemistry",
+  "tab_chapters": "Chapters",
+  "tab_detail": "Detail",
+  "status_draft": "Draft",
+  "actions": { "save": "Save", "publish": "Publish" },
+
+  "details": "Details",
+  "course_details": "Course Details",
+  "field": {
+    "course_name": "Course Name",
+    "course_price": "Course Price",
+    "language": "Language",
+    "cc": "CC",
+    "level": "Level"
+  },
+  "upload_intro_video": "Upload Intro Video",
+  "upload_intro_image": "Upload Intro Image",
+  "hint_video": "Upload Video in Mov, MP4.",
+  "hint_image": "Upload Thumbnail in JPEG, PNG.",
+  "drop": { "drag": "Drag and drop files", "browse": "or Browse" },
+
+  "tab_description": "Description",
+  "tab_syllabus": "Syllabus",
+  "tab_faqs": "FAQ's",
+  "desc_placeholder": "Write your description…",
+  "syllabus_hint": "Add sections & lessons…",
+  "faqs_hint": "Add common questions for your course.",
+  "add_section": "Add Section",
+
+  "level_beginner": "Beginner",
+  "level_intermediate": "Intermediate",
+  "level_advanced": "Advanced",
+
+  "tbl": {
+    "id": "ID",
+    "chapter": "Chapter",
+    "title": "Title",
+    "type": "Type",
+    "date": "Date",
+    "status": "Status",
+    "price": "Price"
+  }
+}

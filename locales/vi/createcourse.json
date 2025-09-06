@@ -1,0 +1,45 @@
+{
+  "create_course": "Tạo khóa học",
+  "course_name_header": "Giải pháp NCERT lớp 12 Hóa học",
+  "tab_chapters": "Chapters",
+  "tab_detail": "Chi tiết",
+  "status_draft": "Bản nháp",
+  "actions": { "save": "Lưu", "publish": "Xuất bản" },
+
+  "details": "Chi tiết",
+  "course_details": "Thông tin khóa học",
+  "field": {
+    "course_name": "Tên khóa học",
+    "course_price": "Giá khóa học",
+    "language": "Ngôn ngữ",
+    "cc": "Phụ đề",
+    "level": "Trình độ"
+  },
+  "upload_intro_video": "Video giới thiệu",
+  "upload_intro_image": "Ảnh giới thiệu",
+  "hint_video": "Tải video định dạng Mov, MP4.",
+  "hint_image": "Tải ảnh JPEG, PNG.",
+  "drop": { "drag": "Kéo thả tệp", "browse": "hoặc Chọn tệp" },
+
+  "tab_description": "Mô tả",
+  "tab_syllabus": "Giáo trình",
+  "tab_faqs": "Hỏi đáp",
+  "desc_placeholder": "Viết mô tả của bạn…",
+  "syllabus_hint": "Thêm phần & bài học…",
+  "faqs_hint": "Thêm các câu hỏi thường gặp.",
+  "add_section": "Thêm phần",
+
+  "level_beginner": "Cơ bản",
+  "level_intermediate": "Trung cấp",
+  "level_advanced": "Nâng cao",
+
+  "tbl": {
+    "id": "ID",
+    "chapter": "Chương",
+    "title": "Tiêu đề",
+    "type": "Loại",
+    "date": "Ngày",
+    "status": "Trạng thái",
+    "price": "Giá"
+  }
+}

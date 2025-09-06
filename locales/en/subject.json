@@ -1,3 +1,65 @@
 {
-    "create_subject": "Create Subject"
+  "create_subject": "Create Subject",
+  "back": "Back",
+  "breadcrumb": {
+    "chapter": "Chapter 1 - The Solid State"
+  },
+  "actions": {
+    "delete": "Delete",
+    "move_to_draft": "Move to Draft",
+    "add_course": "Add Course"
+  },
+  "tab_details": "Details",
+  "tab_resources": "Resources",
+  "tab_seo": "SEO",
+
+  "chapter_details": "Chapter details",
+  "chapter_details_hint": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+
+  "field": {
+    "title": "Title",
+    "subtitle": "Subtitle",
+    "description": "Description",
+    "slug": "Slug",
+    "meta_description": "Meta description"
+  },
+
+  "sample_chapter_title": "Chapter 1 - The Solid State",
+  "sample_chapter_subtitle": "Learn about the solid states with ease and get sample papers and notes too!",
+
+  "upload": {
+    "drag_drop_or_browse": "Drag & drop files, or Browse"
+  },
+
+  "resources": {
+    "upload_notes": {
+      "title": "Upload Notes",
+      "lead": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    "fields": {
+      "content_type": "Content Type",
+      "title": "Title",
+      "description": "Description",
+      "upload_file": "Upload File",
+      "upload_thumbnail": "Upload Thumbnail"
+    },
+    "hints": {
+      "file": "Upload files in Text, Word, PDF.",
+      "thumb": "Upload Thumbnail in JPEG, PNG."
+    },
+    "defaults": {
+      "content_type": "Notes",
+      "title": "Notes",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..."
+    }
+  },
+
+  "seo": {
+    "title": "SEO",
+    "lead": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "ppt_title": "PPT Title",
+    "description": "Description",
+    "sample_title": "Notes",
+    "sample_desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..."
+  }
 }
