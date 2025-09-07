@@ -4,8 +4,14 @@
   "tab_chapters": "Chapters",
   "tab_detail": "Chi tiết",
   "status_draft": "Bản nháp",
+  "cancel": "Hủy",
+  "delete": "Xóa",
   "actions": { "save": "Lưu", "publish": "Xuất bản" },
-
+  "english": "Tiếng Anh", 
+  "vietnamese": "Tiếng Việt", 
+  "spanish": "Tiếng Tây Ban Nha",
+  "update_success": "Cập nhật khóa học thành công!",
+  "update_error": "Lỗi cập nhật khóa học. Vui lòng thử lại.",
   "details": "Chi tiết",
   "course_details": "Thông tin khóa học",
   "field": {
@@ -13,7 +19,14 @@
     "course_price": "Giá khóa học",
     "language": "Ngôn ngữ",
     "cc": "Phụ đề",
-    "level": "Trình độ"
+    "level": "Trình độ",
+    "total_hours": "Tổng số giờ"
+  },
+  "level": {
+    "beginner": "Cơ bản",
+    "intermediate": "Trung cấp",
+    "advanced": "Nâng cao",
+    "all_level": "Tất cả trình độ"
   },
   "upload_intro_video": "Video giới thiệu",
   "upload_intro_image": "Ảnh giới thiệu",

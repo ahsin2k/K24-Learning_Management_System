@@ -4,8 +4,16 @@
   "tab_chapters": "Chapters",
   "tab_detail": "Detail",
   "status_draft": "Draft",
+  "cancel": "Cancel",
+  "delete": "Delete",
   "actions": { "save": "Save", "publish": "Publish" },
-
+  "english": "English", 
+  "vietnamese": "Vietnamese", 
+  "spanish": "Spanish",
+  "update_success": "Course updated successfully!",
+  "update_error": "Error updating course. Please try again.",
+  "create_success": "Course created successfully!",
+  "create_error": "Error creating course. Please try again.",
   "details": "Details",
   "course_details": "Course Details",
   "field": {
@@ -13,7 +21,14 @@
     "course_price": "Course Price",
     "language": "Language",
     "cc": "CC",
-    "level": "Level"
+    "level": "Level",
+    "total_hours": "Total Hours"
+  },
+  "level": {
+    "beginner": "Beginner",
+    "intermediate": "Intermediate",
+    "advanced": "Advanced",
+    "all_level": "All Levels"
   },
   "upload_intro_video": "Upload Intro Video",
   "upload_intro_image": "Upload Intro Image",

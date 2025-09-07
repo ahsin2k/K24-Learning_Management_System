@@ -3,6 +3,19 @@
   "add_course": "Thêm khoá học",
   "more": "Khác",
   "free": "Miễn phí",
+  "status": {
+    "draft": "Nháp",
+    "public": "Công khai"
+  },
+  "confirm_delete_title": "Xác nhận xóa",
+  "confirm_delete_message": "Bạn có chắc chắn muốn xóa khóa học này không? Hành động này không thể hoàn tác.",
+  "cancel": "Hủy",
+  "confirm": "Xác nhận",
+  "actions": {
+    "edit": "Chỉnh sửa",
+    "delete": "Xóa"
+  },
+
   "metric": {
     "price": "Giá",
     "chapters": "Chương",
