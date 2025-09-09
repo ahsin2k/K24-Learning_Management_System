@@ -12,6 +12,8 @@
   "add_to_cart": "Thêm vào giỏ",
   "buy_now": "Mua ngay",
   "share": "Chia sẻ",
+  "save": "Lưu",
+  "cancel": "Hủy",
 
   "tab_description": "Mô tả",
   "tab_certification": "Chứng chỉ",
@@ -43,6 +45,11 @@
   "submit_review": "Gửi đánh giá",
   "review_submitted": "Đánh giá đã được gửi!",
   "review_submit_failed": "Gửi đánh giá thất bại. Vui lòng thử lại.",
+  "review_delete_confirm": "Bạn có chắc chắn muốn xóa đánh giá này không?",
+  "review_deleted": "Đánh giá đã được xóa.",
+  "review_delete_failed": "Xóa đánh giá thất bại. Vui lòng thử lại.",
+  "review_updated": "Đánh giá đã được cập nhật!",
+  "review_update_failed": "Cập nhật đánh giá thất bại. Vui lòng thử lại.",
 
   "learner_reviews": "Đánh giá từ học viên",
   "reviews_total_fmt": "{{count}} đánh giá",
