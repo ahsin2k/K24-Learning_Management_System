@@ -25,6 +25,10 @@ export class CourseService {
     return this.courseModel.findOne({ [field]: value }).exec();
   }
 
+  async findByIdWithReviews(value: any) {
+    return this.courseModel.findOne({ _id: value }).populate('reviews').exec();
+  }
+
   async create(courseData: Partial<CreateCourseDto>): Promise<CourseDocument> {
     const newCourse = new this.courseModel(courseData);
     return newCourse.save();

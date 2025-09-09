@@ -49,3 +49,7 @@ export const formatDateTime = (dateString: string): string => {
     minute: 'numeric',
   });
 }
+
+export const clsx = (...classes: (string | boolean | undefined | null)[]) => {
+  return classes.filter(Boolean).join(' ');
+}

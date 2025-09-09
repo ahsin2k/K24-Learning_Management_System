@@ -79,6 +79,14 @@ export const useApi = () => {
     return api.get(`/reviews/my-reviews`);
   };
 
+  const deleteReview = (id: string) => {
+    return api.delete(`/reviews/${id}`);
+  };
+
+  const updateReview = (id: string, rating: number, content: string) => {
+    return api.patch(`/reviews/${id}`, { rating, content });
+  }
+
   const createReview = (courseId: string, rating: number, content: string) => {
     return api.post(`/reviews/course/${courseId}`, { rating, content });
   };
@@ -98,6 +106,8 @@ export const useApi = () => {
     getTopInstructors,
     getCourseReviews,
     createReview,
+    updateReview,
+    deleteReview,
     getMyReviews
   };
 };

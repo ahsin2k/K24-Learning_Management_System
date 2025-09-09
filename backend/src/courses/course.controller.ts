@@ -5,6 +5,7 @@ import { JwtAuthGuard } from '../guard/jwt-auth.guard';
 import { FileUploadInterceptor } from '../interceptors/file-upload.interceptor';
 import { CreateCourseDto } from './dto/create-course.dto';
 import { UpdateCourseDto } from './dto/update-course.dto';
+import { DetailCourseSerializer } from './detail-course.serialize';
 
 @Controller('courses')
 export class CourseController {
@@ -33,8 +34,8 @@ export class CourseController {
 
   @Get('/:id')
   async getCourseById(@Param('id') id: string) {
-    const course = await this.courseService.findByField('_id', id);
-    return CourseSerializer.fromCourse(course);
+    const course = await this.courseService.findByIdWithReviews(id);
+    return DetailCourseSerializer.fromCourse(course);
   }
 
   @Post('/create')

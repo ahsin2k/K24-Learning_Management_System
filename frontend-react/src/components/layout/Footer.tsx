@@ -94,7 +94,7 @@ export default function Footer() {
                 </ul>
 
                 {/* Socials */}
-                <div className="mt-4 flex items-center gap-3">
+                <div className="mt-4 flex flex-wrap items-center gap-3">
                   {[
                     "image/icons/iconfb.png",
                     "image/icons/icongithub.png",
@@ -111,6 +111,7 @@ export default function Footer() {
                     </a>
                   ))}
                 </div>
+
               </div>
             </div>
           </div>

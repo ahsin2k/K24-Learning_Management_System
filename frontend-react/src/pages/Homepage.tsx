@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useApi } from '../hooks/useAPI';
 import type { Course, Instructor } from './ListCourses';
 import { useEffect, useState } from 'react';
+import { beFileUrl } from '../utils/base.util';
 
 export default function Homepage() {
   const { t } = useTranslation('homepage');
@@ -172,7 +173,7 @@ export default function Homepage() {
                     <div className="aspect-video bg-gray-200">
                       <img
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform"
-                        src={`https://picsum.photos/seed/course${course._id}/300/200`}
+                        src={course.introImage ? beFileUrl(course.introImage) : `https://picsum.photos/seed/course${course._id}/300/200`}
                         alt={course.title}
                       />
                     </div>

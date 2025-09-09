@@ -16,11 +16,6 @@ export class CourseSeederService {
   ) {}
 
   async run() {
-    const allCourses = await this.courseModel.find();
-    const allUsers = await this.userModel.find({ role: 'user' });
-
-    const reviews = await fakeReviews(allCourses, allUsers);
-    const courses = await fakeCourses(allUsers, 60); // tạo 60 khóa học
 
     await this.reviewModel.collection.drop().catch(err => {
       if (err.code === 26) {
@@ -30,8 +25,6 @@ export class CourseSeederService {
       }
     });
 
-    await this.reviewModel.deleteMany({});
-    await this.reviewModel.insertMany(reviews);
     
     await this.courseModel.collection.drop().catch(err => {
       if (err.code === 26) {
@@ -40,9 +33,18 @@ export class CourseSeederService {
         throw err;
       }
     });
+    const allUsers = await this.userModel.find({ role: 'user' });
 
+    const courses = await fakeCourses(allUsers, 60); // tạo 60 khóa học
+    
     await this.courseModel.deleteMany({});
     await this.courseModel.insertMany(courses);
+
+    const allCourses = await this.courseModel.find();
+    const reviews = await fakeReviews(allCourses, allUsers);
+
+    await this.reviewModel.deleteMany({});
+    await this.reviewModel.insertMany(reviews);
 
     console.log('Seeded courses:', courses);
     console.log('Seeded reviews:', reviews);

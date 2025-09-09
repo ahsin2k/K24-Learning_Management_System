@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import Footer from "../components/layout/Footer";
 import { useApi } from "../hooks/useAPI";
-import { formatDateTime } from "../utils/base.util";
+import { beFileUrl, clsx, formatDateTime } from "../utils/base.util";
 import type { Course } from "./ListCourses";
 import toast from "react-hot-toast";
 import { useAuth } from "../hooks/useAuth";
@@ -41,6 +41,8 @@ function RatingInline({
     </div>
   );
 }
+
+type DetailCourse = Course & { countDetailReviews: { [key: string]: number } };
 
 /* Tabs dạng button, active nền xám */
 function TabsButtons({
@@ -91,7 +93,7 @@ function BuyCard({
         {/* Preview image */}
         <div className="aspect-video bg-slate-100 rounded-xl overflow-hidden mb-4">
           <img
-            src={`https://picsum.photos/seed/course${course?._id || "default"}/400/225`}
+            src={course?.introImage ? beFileUrl(course.introImage) : `https://picsum.photos/seed/course${course?._id || "default"}/400/225`}
             alt={t("preview_alt", { ns: "course", defaultValue: "Course Preview" })}
             className="w-full h-full object-cover"
           />
@@ -168,9 +170,9 @@ function StarRow({ stars, percent }: { stars: number; percent: number }) {
 }
 
 export type CourseReview = {
-  _id: number;
-  userId: { _id: number, firstName: string, lastName: string, avatar: string };
-  courseId: { _id: number, title: string };
+  _id: string;
+  userId: { _id: string, firstName: string, lastName: string, avatar: string };
+  courseId: { _id: string, title: string };
   rating: number;
   content: string;
   createdAt: string;
@@ -183,13 +185,17 @@ export default function DetailCourse() {
   const [activeTab, setActiveTab] = useState<string>(
     t("tab_description", { ns: "course", defaultValue: "Description" })
   );
-  const [course, setCourse] = useState<Course | null>(null);
+  const [course, setCourse] = useState<DetailCourse | null>(null);
   const [courseReviews, setCourseReviews] = useState<CourseReview[]>([]);
   const [otherCourses, setOtherCourses] = useState<Course[]>([]);
   const [countReviewsToShow, setCountReviewsToShow] = useState(3);
+  const [editingReviewId, setEditingReviewId] = useState<string | null>(null);
+  const [editRating, setEditRating] = useState<number>(0);
+  const [editText, setEditText] = useState<string>("");
+  const { user } = useAuth();
 
   const { isLoggedIn } = useAuth();
-  const { getCourseById, getCourseReviews, getTrendingCoursesByLimit, createReview } = useApi();
+  const { getCourseById, getCourseReviews, getTrendingCoursesByLimit, createReview, updateReview, deleteReview } = useApi();
 
   const navigate = useNavigate();
 
@@ -219,9 +225,46 @@ export default function DetailCourse() {
     try {
       await createReview(id, userRating, userText);
       await fetchCourseReviews(id);
+      await fetchCourse(id);
       toast.success(t("review_submitted", { ns: "course" }));
     } catch (error) {
       toast.error(t("review_submit_failed", { ns: "course" }));
+    }
+  };
+
+  const handleEditClick = (review: any) => {
+    setEditingReviewId(review._id);
+    setEditRating(review.rating);
+    setEditText(review.content);
+  };
+
+  const handleCancelEdit = () => {
+    setEditingReviewId(null);
+    setEditRating(0);
+    setEditText("");
+  };
+
+  const handleSaveEdit = async (reviewId: string) => {
+    try {
+      await updateReview(reviewId, editRating, editText);
+      id && await fetchCourseReviews(id);
+      setEditingReviewId(null);
+      await fetchCourse(id!);
+      toast.success(t("review_updated", { ns: "course" }));
+    } catch (error) {
+      toast.error(t("review_update_failed", { ns: "course" }));
+    }
+  };
+
+  const handleDeleteReview = async (reviewId: string) => {
+    if (!confirm(t("review_delete_confirm", { ns: "course" }))) return;
+    try {
+      await deleteReview(reviewId);
+      id && await fetchCourseReviews(id);
+      id && await fetchCourse(id);
+      toast.success(t("review_deleted", { ns: "course" }));
+    } catch (error) {
+      toast.error(t("review_delete_failed", { ns: "course" }));
     }
   };
 
@@ -361,7 +404,7 @@ export default function DetailCourse() {
             {/* Khối rating */}
             <div className="flex items-center flex-wrap text-sm">
               <RatingInline
-                value={course?.avgRating || 0}
+                value={course?.avgRating ? Math.round(course.avgRating * 10) / 10 : 0}
                 textAfter={t("rating_count_fmt", {
                   ns: "course",
                   count: course?.totalRating || 0,
@@ -568,8 +611,8 @@ export default function DetailCourse() {
             <div className="lg:col-span-3">
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
-                  <span className="text-xl font-semibold text-slate-900">{course?.avgRating || 0}</span>
-                  <Stars value={course?.avgRating || 0} />
+                  <span className="text-xl font-semibold text-slate-900">{course?.avgRating ? Math.round(course.avgRating * 10) / 10 : 0}</span>
+                  <Stars value={course?.avgRating ? Math.round(course.avgRating * 10) / 10 : 0} />
                 </div>
                 <div className="text-sm text-slate-500">
                   {t("reviews_total_fmt", { ns: "course", count: course?.totalRating || 0 })}
@@ -577,11 +620,11 @@ export default function DetailCourse() {
               </div>
 
               <div className="mt-5 space-y-3">
-                <StarRow stars={5} percent={80} />
-                <StarRow stars={4} percent={10} />
-                <StarRow stars={3} percent={5} />
-                <StarRow stars={2} percent={3} />
-                <StarRow stars={1} percent={2} />
+                <StarRow stars={5} percent={course && course.totalRating !== 0 ? Math.round(100 * (course?.countDetailReviews['5'] || 0)/ course.totalRating) : 0} />
+                <StarRow stars={4} percent={course && course.totalRating !== 0 ? Math.round(100 * (course?.countDetailReviews['4'] || 0)/ course.totalRating) : 0} />
+                <StarRow stars={3} percent={course && course.totalRating !== 0 ? Math.round(100 * (course?.countDetailReviews['3'] || 0)/ course.totalRating) : 0} />
+                <StarRow stars={2} percent={course && course.totalRating !== 0 ? Math.round(100 * (course?.countDetailReviews['2'] || 0)/ course.totalRating) : 0} />
+                <StarRow stars={1} percent={course && course.totalRating !== 0 ? Math.round(100 * (course?.countDetailReviews['1'] || 0)/ course.totalRating) : 0} />
               </div>
             </div>
 
@@ -591,36 +634,88 @@ export default function DetailCourse() {
                 {courseReviews.slice(0, countReviewsToShow).map((review) => (
                   <div
                     key={review._id}
-                    className="border border-slate-200 rounded-xl bg-white p-5 shadow-sm"
+                    className="border-b border-slate-200 py-4 flex justify-between"
                   >
-                    <div className="flex items-start gap-4">
-                      <img
-                        src={`https://picsum.photos/seed/instructor${review.userId._id}/300/300`}
-                        alt="user"
-                        className="w-12 h-12 rounded-full"
-                      />
-                      <div className="flex-1">
-                        <div className="flex items-center gap-3">
-                          <div className="font-medium text-slate-900">
-                            {review.userId.firstName} {review.userId.lastName}
+                    <div className="flex-1">
+                      <div className="flex items-center justify-between">
+                        <span className="flex items-center gap-3">
+                          <h4 className="font-semibold text-slate-800">{review.userId.firstName} {review.userId.lastName}</h4>
+                          <span>
+                            {t("reviewed_on", {
+                              ns: "course",
+                              date: formatDateTime(review.createdAt),
+                            })}
+                          </span>
+                        </span>
+                        <span>
+                          <Stars value={review.rating} />
+                        </span>
+                      </div>
+
+                      {/* Nếu đang edit review này */}
+                      {editingReviewId === review._id ? (
+                        <div className="mt-2">
+                          {/* Rating edit */}
+                          <div className="flex items-center gap-1 mb-2">
+                            {[1, 2, 3, 4, 5].map((star) => (
+                              <button
+                                key={star}
+                                type="button"
+                                onClick={() => setEditRating(star)}
+                                className={clsx(
+                                  "text-xl cursor-pointer",
+                                  editRating >= star ? "text-yellow-400" : "text-gray-300"
+                                )}
+                              >
+                                ★
+                              </button>
+                            ))}
                           </div>
-                          <div className="flex items-center gap-2 text-sm text-slate-500">
-                            <span>
-                              {Stars({ value: review.rating })}
-                            </span>
-                            <span>
-                              {t("reviewed_on", {
-                                ns: "course",
-                                date: formatDateTime(review.createdAt),
-                              })}
-                            </span>
+
+                          {/* Text edit */}
+                          <textarea
+                            className="w-full border rounded-lg p-2 text-sm"
+                            value={editText}
+                            onChange={(e) => setEditText(e.target.value)}
+                          />
+
+                          <div className="flex gap-2 mt-2">
+                            <button
+                              onClick={() => handleSaveEdit(review._id)}
+                              className="px-3 py-1 bg-green-500 text-white rounded cursor-pointer"
+                            >
+                              {t("save", { ns: "course" })}
+                            </button>
+                            <button
+                              onClick={handleCancelEdit}
+                              className="px-3 py-1 bg-gray-400 text-white rounded cursor-pointer"
+                            >
+                              {t("cancel", { ns: "course" })}
+                            </button>
                           </div>
                         </div>
-                        <p className="mt-2 text-slate-700 leading-relaxed text-sm">
-                          {review.content}
-                        </p>
-                      </div>
+                      ) : (
+                        <p className="text-slate-600 mt-2">{review.content}</p>
+                      )}
                     </div>
+
+                    {/* Nếu là review của user hiện tại thì cho phép Edit/Delete */}
+                    {user && review.userId._id === user._id && (
+                      <div className="flex flex-col gap-1 ml-4">
+                        <button
+                          onClick={() => handleEditClick(review)}
+                          className="text-blue-500 cursor-pointer text-sm"
+                        >
+                          ✏️
+                        </button>
+                        <button
+                          onClick={() => handleDeleteReview(review._id)}
+                          className="text-red-500 cursor-pointer text-sm"
+                        >
+                          🗑️
+                        </button>
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
@@ -757,7 +852,7 @@ export default function DetailCourse() {
                 >
                   <div className="aspect-video bg-slate-100 overflow-hidden">
                     <img
-                      src={`https://picsum.photos/seed/course${otherCourse._id}/400/300`}
+                      src={otherCourse.introImage ? beFileUrl(otherCourse.introImage) : `https://picsum.photos/seed/course${otherCourse._id}/400/300`}
                       alt={t("course_card_alt", { ns: "course", defaultValue: "course" })}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform"
                     />
@@ -768,7 +863,7 @@ export default function DetailCourse() {
                     </h4>
                     <p className="text-xs text-slate-500">John Doe</p>
                     <div className="flex justify-between items-center mt-2">
-                      <Stars value={otherCourse.avgRating} /> 
+                      <Stars value={otherCourse.avgRating ? Math.round(otherCourse.avgRating * 10) / 10 : 0} />
                       <span className="text-slate-900 font-semibold text-sm">
                         ${otherCourse.price}
                       </span>

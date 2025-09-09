@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import Footer from "../components/layout/Footer";
 import { useApi } from "../hooks/useAPI";
 import { useLocation, useNavigate } from "react-router-dom";
+import { beFileUrl } from "../utils/base.util";
 
 /* ---------- Helpers ---------- */
 function Stars({ value }: { value: number }) {
@@ -363,7 +364,7 @@ export default function ListCourses() {
                     >
                       <div className="aspect-video overflow-hidden bg-slate-100">
                         <img
-                          src={`https://picsum.photos/seed/course${c._id}/400/200`}
+                          src={c.introImage ? beFileUrl(c.introImage) : `https://picsum.photos/seed/course${c._id}/400/200`}
                           alt={c.title}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform"
                         />
@@ -442,7 +443,7 @@ export default function ListCourses() {
               >
                 <div className="aspect-video overflow-hidden bg-slate-100">
                   <img
-                    src={`https://picsum.photos/seed/course${c._id}/400/200`}
+                    src={c.introImage ? beFileUrl(c.introImage) : `https://picsum.photos/seed/course${c._id}/400/200`}
                     alt={c.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform"
                   />

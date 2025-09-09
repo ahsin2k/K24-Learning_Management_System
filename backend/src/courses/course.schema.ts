@@ -1,8 +1,9 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import mongoose, { Document } from 'mongoose';
+import mongoose, { Document, Types } from 'mongoose';
 import { User } from '../users/users.schema';
+import { ReviewDocument } from '../reviews/review.schema';
 
-export type CourseDocument = Course & Document;
+export type CourseDocument = Course & Document & Partial<{ reviews: ReviewDocument[] }>;
 
 @Schema()
 export class Course {
@@ -59,3 +60,12 @@ export class Course {
 }
 
 export const CourseSchema = SchemaFactory.createForClass(Course);
+
+CourseSchema.virtual('reviews', {
+  ref: 'Review',
+  localField: '_id',
+  foreignField: 'courseId',
+});
+
+CourseSchema.set('toObject', { virtuals: true });
+CourseSchema.set('toJSON', { virtuals: true });

@@ -47,7 +47,7 @@ export default function Dashboard() {
 
   return (
     // CHỪA CHỖ CHO SIDEBAR: ml-60 = 15rem (khớp w-60 của Sidebar)
-    <div className="ml-60 px-4 md:px-6 lg:px-8 py-6 max-w-[1600px]">
+    <div className="ml-10 px-4 md:px-6 lg:px-8 py-6 max-w-[1600px]">
       {/* Header: title + actions */}
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-xl md:text-2xl font-semibold text-slate-900">
