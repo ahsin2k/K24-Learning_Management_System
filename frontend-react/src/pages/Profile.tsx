@@ -262,7 +262,7 @@ export default function Profile() {
 
                 {/* Save Button */}
                 <div className="col-span-2 flex justify-end mt-4">
-                  <button type="submit" className="bg-blue-600 text-white px-6 py-2 rounded-lg shadow hover:bg-blue-700 transition">
+                  <button type="submit" className="bg-blue-600 text-white px-6 py-2 rounded-lg shadow hover:bg-blue-700 transition cursor-pointer">
                     {t("saveProfile", {ns: 'profile'})}
                   </button>
                 </div>
@@ -275,29 +275,6 @@ export default function Profile() {
         return (
           <div className="p-8 w-full">
             <h2 className="text-2xl font-bold mb-6">{t('myCourses')}</h2>
-
-            {/* Toolbar: Search + Sort + Filter */}
-            <div className="flex items-center justify-between mb-6">
-              <div className="relative flex-1 max-w-md">
-                <input
-                  type="text"
-                  placeholder={t('searchUser')}
-                  className="w-full border p-2 rounded pl-10"
-                />
-                <svg className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-              </div>
-              <div className="flex items-center space-x-3">
-                <select className="border p-2 rounded">
-                  <option>{t('relevance')}</option>
-                  <option>{t('latest')}</option>
-                </select>
-                <button className="border px-4 py-2 rounded hover:bg-gray-100">
-                  {t('filter')}
-                </button>
-              </div>
-            </div>
 
             {/* Course Cards Grid */}
             <div className="grid grid-cols-3 gap-6">

@@ -568,7 +568,7 @@ export default function CreateCourse() {
                     <div className="relative">
                       <Label>{t("field.language", { ns: "createcourse", defaultValue: "Language" })}</Label>
                       <div className="relative">
-                        <Input value={formData.showLanguage} readOnly />
+                        <Input value={formData.showLanguage ? t(formData.showLanguage, { ns: "createcourse"}) : ""} readOnly />
                         <button
                           type="button"
                           className="absolute right-2 top-1/2 -translate-y-1/2 px-2 py-1 rounded-md hover:bg-slate-100 cursor-pointer"

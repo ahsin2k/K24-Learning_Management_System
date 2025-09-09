@@ -395,7 +395,7 @@ export default function UpdateCourse() {
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-slate-900 mb-4">
-            {t("create_course", { ns: "createcourse", defaultValue: "Create Course" })}
+            {t("update_course", { ns: "createcourse" })}
           </h1>
         </div>
       </div>
@@ -607,7 +607,7 @@ export default function UpdateCourse() {
                     <div className="relative">
                       <Label>{t("field.language", { ns: "createcourse", defaultValue: "Language" })}</Label>
                       <div className="relative">
-                        <Input value={formData.showLanguage} readOnly />
+                        <Input value={formData.showLanguage ? t(formData.showLanguage, { ns: "createcourse"}) : ""} readOnly />
                         <button
                           type="button"
                           className="absolute right-2 top-1/2 -translate-y-1/2 px-2 py-1 rounded-md hover:bg-slate-100 cursor-pointer"

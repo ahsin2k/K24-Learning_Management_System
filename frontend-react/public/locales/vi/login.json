@@ -1,5 +1,7 @@
 {
     "title": "Chào mừng đến với Đăng nhập",
+    "password": "Mật khẩu",
+    "email": "E-mail",
     "please_login": "Đăng nhập đến tài khoản của bạn",
     "forgot_password": "Quên Mật Khẩu?",
     "username_or_Email_id":"Tên Người Dùng Hoặc Email",

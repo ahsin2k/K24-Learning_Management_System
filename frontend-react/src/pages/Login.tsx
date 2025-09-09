@@ -48,8 +48,7 @@ export default function Login() {
           <form onSubmit={handleSubmit} className="space-y-5">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
-                Email
-
+                {t('email', { ns: 'login' })}
               </label>
               <input
                 value={email}

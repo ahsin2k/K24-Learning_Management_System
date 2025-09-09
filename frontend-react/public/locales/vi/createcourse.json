@@ -1,5 +1,6 @@
 {
   "create_course": "Tạo khóa học",
+  "update_course": "Cập nhật khóa học",
   "course_name_header": "Giải pháp NCERT lớp 12 Hóa học",
   "tab_chapters": "Chapters",
   "tab_detail": "Chi tiết",
@@ -12,6 +13,8 @@
   "spanish": "Tiếng Tây Ban Nha",
   "update_success": "Cập nhật khóa học thành công!",
   "update_error": "Lỗi cập nhật khóa học. Vui lòng thử lại.",
+  "create_success": "Khóa học được tạo thành công!",
+  "create_error": "Lỗi tạo khóa học. Vui lòng thử lại.",
   "details": "Chi tiết",
   "course_details": "Thông tin khóa học",
   "field": {

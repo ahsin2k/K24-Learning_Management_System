@@ -1,5 +1,7 @@
 {
     "title": "Welcome to Login",
+    "password": "Password",
+    "email": "Email",
     "please_login": "Sign in to your account",
     "forgot_password": "Forgot password?",
     "username_or_Email_id":"Username or Email id",
